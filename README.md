@@ -37,60 +37,23 @@ lib/
 │   ├── product_state.dart    # States for ProductBloc
 │   ├── cart_cubit.dart       # Cubit for cart management
 │   ├── favorites_cubit.dart  # Cubit for favorites
-│   └── index.dart            # Exports
 ├── models/                   # Data models
 │   ├── product.dart          # Product model with JSON serialization
 │   ├── cart_item.dart        # Cart item model
-│   └── index.dart            # Exports
 ├── screens/                  # UI screens
 │   ├── home_screen.dart      # Main product listing screen
 │   ├── product_detail_screen.dart  # Product detail page
-│   └── index.dart            # Exports
 ├── widgets/                  # Reusable widgets
 │   ├── product_card.dart     # Product card component
 │   ├── search_bar.dart       # Search bar widget
 │   ├── category_filter.dart  # Category filter tabs
 │   ├── category_icon_grid.dart # Category icons grid
-│   └── index.dart            # Exports
 ├── services/                 # External services
 │   ├── product_api_service.dart    # API calls to Fake Store
 │   ├── local_storage_service.dart  # Local storage operations
-│   └── index.dart            # Exports
 └── routes/                   # Navigation
     └── app_router.dart       # GoRouter configuration
 ```
-
-## Setup & Installation
-
-### Prerequisites
-- Flutter SDK: 3.7.2 or higher
-- Dart: 3.7.2 or higher
-- Android SDK (for Android development)
-- Xcode (for iOS development)
-
-### Installation Steps
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd product_listing_app
-   ```
-
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run the app**
-   ```bash
-   flutter run
-   ```
-
-4. **For release build**
-   ```bash
-   flutter build apk  # Android
-   flutter build ios  # iOS
-   ```
 
 ## API Used
 
@@ -155,58 +118,7 @@ Endpoints used:
 ✅ Favorite/heart toggle (non-functional UI)  
 ✅ Loading, error, and empty states  
 
-### Bonus Features
-✅ Persistent favorites using SharedPreferences  
-✅ Persistent cart using SharedPreferences  
-✅ Category icon grid for quick navigation  
-✅ Cart item count badge  
-✅ Quantity selection on detail screen  
 
-### Not Implemented (Future Enhancements)
-- Pull-to-refresh functionality
-- Pagination
-- Full cart screen with checkout
-- Order history
-- User authentication
-
-## Known Limitations & Shortcuts
-
-1. **Avatar Image**: Using static avatar placeholder (could use real user images with authentication)
-2. **Category Icons**: Using Material icons instead of custom images (limitation noted in UI)
-3. **Notifications**: Static implementation (would require backend integration)
-4. **Cart Screen**: Not fully implemented (focus on core listing and detail screens)
-5. **Payment Integration**: Not implemented (out of scope for this assessment)
-
-## How to Test
-
-1. **Search**: Type in the search bar to filter products by title
-2. **Categories**: Tap category filter tabs to filter by category
-3. **Favorites**: Tap heart icon to toggle favorite status (persists)
-4. **Add to Cart**: Tap card or use "Add to Cart" on detail screen
-5. **Cart Badge**: Shows total items in cart (top right)
-6. **Error Handling**: Try with network disconnected to see error state
-7. **Empty State**: Search for non-existent product to see empty state
-
-## Code Quality
-
-- **Consistency**: Consistent naming conventions and code style
-- **Readability**: Well-commented and self-documenting code
-- **Performance**: Efficient rebuilds using BLoC
-- **Reusability**: Composable widgets and services
-- **Testing Ready**: Code structure supports easy unit and widget testing
-
-## Future Improvements
-
-- Add unit tests and widget tests
-- Implement pull-to-refresh
-- Add pagination for better performance with large datasets
-- Implement full cart and checkout flow
-- Add user authentication
-- Implement analytics
-- Add offline mode with local data caching
-- Implement product reviews and ratings
-
-## License
 
 This project is for demonstration purposes.
 
